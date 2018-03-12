@@ -56,7 +56,7 @@ if ( checkGETVariables() ) {
 				$fieldInfo = $fields[$key];
 				if ($value && !endsWith($key, "_complete")) {
 					switch ($fieldInfo['field_type']) { //change some fieldtypes to human readable values:
-						case 'yesno': $value = ($value == '1')? "Ano":"Ne"; break;
+						case 'yesno': $value = ($value == '1')? "Yes":"No"; break;
 						case 'dropdown': $choices = getChoices($fieldInfo['select_choices_or_calculations']); $value = $choices[$value]; break;
 						case 'radio': $choices = getChoices($fieldInfo['select_choices_or_calculations']); $value = $choices[$value]; break;
 						case 'checkbox':
